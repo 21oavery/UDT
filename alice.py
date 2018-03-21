@@ -84,7 +84,7 @@ while True:
             for i in range(numSamples):
                 sample = 32767 * math.sin(math.pi * 2 * (i % numSamplesPerCyc) / numSamplesPerCyc)
                 data.append(int(sample))
-    fstr = StringIO.StringIO()
+    fstr = StringIO()
     f = wave.open(fstr, 'w')
     try:
         f.setparams((1, dataSize, sampleRate, int(sampleRate * duration), "NONE", "Uncompressed"))
