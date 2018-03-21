@@ -25,7 +25,7 @@ mbase = "ascii"
 echars = list((string.ascii_lowercase + " " + string.digits + string.punctuation).replace("~", "") + "~")
 binsize = 100
 
-rmb = raw_input("Select message base (options: ascii, 32, 64) (ascii default): ").lower()
+rmb = input("Select message base (options: ascii, 32, 64) (ascii default): ").lower()
 
 if rmb == "32":
     mbase = "32"
@@ -36,7 +36,7 @@ elif rmb == "64":
     echars = list((string.ascii_letters + string.digits + "+/= ").replace("~", "") + "~")
     #binsize = 150
 
-pdr = raw_input("Enter duration (estimate distance) (default 0.1 seconds): ")
+pdr = input("Enter duration (estimate distance) (default 0.1 seconds): ")
 
 pduration = 0.1 # seconds
 if pdr != "":
@@ -48,7 +48,7 @@ sampleRate = float(160 * 1000)
 dataSize = 2 # 2 bytes because of using signed short integers => bit depth = 16
 
 while True:
-    inp = raw_input("\nSend a message: ")
+    inp = input("\nSend a message: ")
     #inp = "abcdefghijklmnopqrstuvwxyz 0123456789" #"The newest version of the device has a frequency of approximately 17.4 kHz that can generally be heard only by young people."
     if mbase == "ascii":
         inp = inp.lower().replace("~", "")
