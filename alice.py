@@ -53,9 +53,9 @@ while True:
     if mbase == "ascii":
         inp = inp.lower().replace("~", "")
     elif mbase == "32":
-        inp = base64.b32encode(inp)
+        inp = base64.b32encode(bytes(inp, "utf-8"))
     elif mbase == "64":
-        inp = base64.b64encode(inp)
+        inp = base64.b64encode(bytes(inp, "utf-8"))
     if mbase != "ascii":
         ninp = ""
         pchr = ""
