@@ -13,7 +13,7 @@ import os
 
 basefreq = 17000
 
-rbf = raw_input("Select band start (17000 default): ")
+rbf = input("Select band start (17000 default): ")
 
 if rbf != 0:
     try:
