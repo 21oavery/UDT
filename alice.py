@@ -94,7 +94,7 @@ while True:
     #print "\nSaving wav file..."
     #with open("chat.wav", "wb") as chatwav:
     #    chatwav.write(fstr.getvalue())
-    print "\nPlaying wav file..."
+    print("\nPlaying wav file...")
     winsound.PlaySound(fstr.getvalue(), winsound.SND_MEMORY) # | winsound.SND_ASYNC
     #for char in list(inp):
     #    sys.stdout.write(char)
