@@ -1,4 +1,4 @@
-import StringIO from io
+from io import StringIO
 import winsound
 import base64
 import string
