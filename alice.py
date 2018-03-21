@@ -1,4 +1,4 @@
-import cStringIO as StringIO
+import StringIO from io
 import winsound
 import base64
 import string
