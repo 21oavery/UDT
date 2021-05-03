@@ -1,4 +1,4 @@
-from io import StringIO
+from io import BytesIO
 import winsound
 import base64
 import string
@@ -84,7 +84,7 @@ while True:
             for i in range(numSamples):
                 sample = 32767 * math.sin(math.pi * 2 * (i % numSamplesPerCyc) / numSamplesPerCyc)
                 data.append(int(sample))
-    fstr = StringIO()
+    fstr = BytesIO()
     f = wave.open(fstr, 'wb')
     try:
         f.setparams((1, dataSize, sampleRate, int(sampleRate * duration), "NONE", "Uncompressed"))
